@@ -1,8 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 body {
   background-color: #ffeedb;
+  font-family: 'Satisfy', cursive;
 }
 
 h1 {
   color: rgb(5, 5, 49);
   font-size: 40px;
 }
+
+/* Global image defaults: responsive by default */
+img {
+  border: 1px solid #ddd;
+  padding: 5px;
+  max-width: 100%; /* scale down to container width */
+  height: auto;    /* preserve aspect ratio */
+  display: block;
+}
+
+/* Utility class for images that should span the full width of their container */
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
