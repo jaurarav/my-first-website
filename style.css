@@ -10,7 +10,7 @@ h1 {
 img {
   border: 1px solid #ddd;
   padding: 5px;
-  width: 150px;
+  width: 300px;
 }
 
 
@@ -20,8 +20,8 @@ img {
 img {
   border: 1px solid #ddd;
   padding: 5px;
-  max-width: 100%; /* scale down to container width */
-  height: auto;    /* preserve aspect ratio */
+  max-width: 200%; /* scale down to container width */
+  height: 100%;    /* preserve aspect ratio */
   display: block;
 }
 
