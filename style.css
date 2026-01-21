@@ -136,9 +136,17 @@ nav {
   border-bottom: 3px solid transparent;
   transition: all 0.3s ease;
 }
+
 css
 /* Hover Effects for Navigation Links */
 .nav-links a:hover {
   color: #931049;
   border-bottom: 3px solid #931049;
+}
+css
+/* Active/Current Page Styling */
+.nav-links a.active {
+  color: #e74c3c;
+  border-bottom: 3px solid #e74c3c;
+  font-weight: 600;
 }
