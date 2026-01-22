@@ -150,3 +150,13 @@ css
   border-bottom: 3px solid #e74c3c;
   font-weight: 600;
 }
+css
+/* Enhanced Header Styling */
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
