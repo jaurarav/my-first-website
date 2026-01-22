@@ -385,3 +385,124 @@ main {
     padding: 3rem 1.5rem;
   }
 }
+/* Lab Page Styling */
+.lab-header {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.lab-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.lab-date {
+  font-size: 1.1rem;
+  color: #ecf0f1;
+  font-style: italic;
+}
+
+.lab-content {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.learning-section {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.learning-section h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.learning-section ul {
+  margin-left: 2rem;
+  line-height: 1.8;
+}
+
+.learning-section li {
+  margin-bottom: 0.5rem;
+}
+/* Screenshot Gallery */
+.lab-images {
+  margin-bottom: 4rem;
+}
+
+.lab-images h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.screenshot-grid figure {
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-grid figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.screenshot-grid figcaption {
+  padding: 1rem;
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  background-color: #f8f9fa;
+}
+/* Reflection Section */
+.lab-reflection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.lab-reflection h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.lab-reflection p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.lab-reflection p:last-child {
+  margin-bottom: 0;
+}
