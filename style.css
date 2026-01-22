@@ -131,8 +131,8 @@ nav {
 
 /* Active/Current Page Styling */
 .nav-links a.active {
-  color: #8571e9;
-  border-bottom: 3px solid #8571e9;
+  color: #dbd4fa;
+  border-bottom: 3px solid #dbd4fa;
   font-weight: 600;
 }
 
@@ -165,5 +165,96 @@ header {
   
   .logo h1 {
     font-size: 1.2rem;
+  }
+}
+/* Footer Styling */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 3rem 2rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  color: #3498db;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #3498db;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(236, 240, 241, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
+/* Main Content Styling */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 400px);
+}
+
+/* Ensures content doesn't touch edges on small screens */
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
+}
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+  
+  footer {
+    padding: 2rem 1rem 1rem;
   }
 }
