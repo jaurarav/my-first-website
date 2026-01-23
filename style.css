@@ -106,6 +106,13 @@ nav {
   font-weight: 600;
 }
 
+.logo img {
+  height: 70px;
+  width: auto;
+  border: none;
+  padding: 0;
+}
+
 /* Navigation Links */
 .nav-links {
   display: flex;
