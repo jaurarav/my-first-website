@@ -169,7 +169,7 @@ header {
 }
 /* Footer Styling */
 footer {
-  background-color: #f0cdee;
+  background-color: #e08888;
   color: #24011c;
   padding: 3rem 2rem 1rem;
   margin-top: 4rem;
@@ -267,7 +267,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f9dfdf;
+  background-color: #e4d2c8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -353,7 +353,7 @@ main {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: #4e2610;
+  background: rgba(224, 136, 136, 0.7);
   color: white;
   border-radius: 12px;
   margin-bottom: 3rem;
@@ -389,7 +389,7 @@ main {
 .lab-header {
   text-align: center;
   padding: 3rem 2rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ffe3e3 0%, #925c5d 100%);
   color: white;
   border-radius: 12px;
   margin-bottom: 3rem;
@@ -421,7 +421,7 @@ main {
 }
 
 .learning-section h3 {
-  color: #667eea;
+  color: #a52050;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -489,7 +489,7 @@ main {
   padding: 2rem;
   background-color: #ecf0f1;
   border-radius: 8px;
-  border-left: 4px solid #3498db;
+  border-left: 4px solid #e08888;
 }
 
 .lab-reflection h2 {
