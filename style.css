@@ -153,6 +153,26 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Breadcrumb Navigation */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.breadcrumb a {
+  color: #a52050;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #931049;
+  text-decoration: underline;
+}
+
 /* Improve spacing and readability */
 .nav-links {
   display: flex;
@@ -511,5 +531,32 @@ main {
 }
 
 .lab-reflection p:last-child {
+  margin-bottom: 0;
+}
+/* About Goals Section */
+.Goals {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Goals h2 {
+  color: #a52050;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.Goals p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.Goals p:last-child {
   margin-bottom: 0;
 }
