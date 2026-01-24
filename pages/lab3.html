@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../Images/Logo.png" alt="My DevDiaries Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="lab3.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <span> / </span>
+            <a href="lab2.html">Lab 2</a>
+        </nav>
+        <section class="lab-header">
+            <h1>Lab 3</h1>
+            <p class="lab-date">22/January/2026</p>
+        </section>
+
+        <section class="lab-content">
+            <h2>What I Learned</h2>
+
+            <div class="learning-section">
+                <p>In this lab, I learned about storyboarding for non-linear media. I learned to reverse engineer storyboards for two different games.</p>
+            </div>
+
+
+        </section>
+
+        <section class="lab-images">
+            <h2>Project Storyboards</h2>
+            <p>Click on each storyboard to see the full details!</p>
+
+            <div class="storyboard-grid">
+                <figure>
+                    <img src="../images/lab-3-gameboy.jpg" alt="This is screenshot 1">
+                    <figcaption>Storyboard 1</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../images/lab-3-train-scene.jpg" alt="This is screenshot 2">
+                    <figcaption>Storyboard 2</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="lab-reflection">
+            <h2>Reflection</h2>
+            <p><strong>Question 2:</strong></p>
+            <p>My partner is Josip Petrusa. My partner utilized different ways to show the graphic effects in his storyboards. In the Pokemon battle storyboard, the use of arrows going back and forth is confusing because it indicates the screen alternates however I believe that was just supposed to be the screen shaking at some points. In the uncharted 2 storyboard, I liked how Jo added different things he was communicated through different colours. Something which would've enahnced the storyboard is enhacing the space this character was in by showing an outline of the mountain background in the storyboard. Sometimes the depth of the character gets lost within the shots. I think not adding too much detail as I did compared to my partner's storyboard was not needed and I would utilize a simplier approach to my storyboards.</p>
+            <p><strong>Question 3:</strong></p>
+            <p>The main differentiation for me comes with being able to test your visuals in the early stages. For linear media, I would find it hard to visualize the final camera movements, feel and style of the final project. What I find similar is the research and storyboarding phase. Research is essential for both types of media in the same way as you're gathering knowledge about what you want to communicate. For storyboarding, it can differentiate a bit as with linear media, there is a flow in the story from start to end and the user does not have much control on where they start. However, with non-linear media, the storyboard is created by keeping the user flow in mind and thinking about the variations in what is shown based on user interaction.</p>
+
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged image">
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.querySelector('.modal-close');
+        const storyboardImages = document.querySelectorAll('.storyboard-grid img');
+
+        // Open modal on image click
+        storyboardImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.classList.add('active');
+                modalImage.src = this.src;
+            });
+        });
+
+        // Close modal on close button click
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+
+        // Close modal on background click
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
