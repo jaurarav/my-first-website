@@ -196,7 +196,7 @@ header {
 }
 /* Footer Styling */
 footer {
-  background-color: #e08888;
+  background: linear-gradient(135deg, #ffe3e3 0%, #925c5d 100%);
   color: #24011c;
   padding: 3rem 2rem 1rem;
   margin-top: 4rem;
@@ -416,7 +416,7 @@ main {
 .lab-header {
   text-align: center;
   padding: 3rem 2rem 2rem;
-  background: linear-gradient(135deg, #ffe3e3 0%, #925c5d 100%);
+  background: #e08888 60%;
   color: white;
   border-radius: 12px;
   margin-bottom: 3rem;
