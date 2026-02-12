@@ -755,3 +755,25 @@ body {
   max-height: 90%;
   object-fit: contain;
 }
+
+.story-step {
+  min-height: 90vh;
+  padding: 40px 0;
+}
+
+
+.story-step h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+
+.story-step p {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+
+.spacer {
+  height: 20vh;
+}
