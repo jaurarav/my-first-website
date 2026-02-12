@@ -68,40 +68,6 @@
             <img id="modalImage" src="" alt="Enlarged image">
         </div>
     </div>
-
-    <script>
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const modalClose = document.querySelector('.modal-close');
-        const storyboardImages = document.querySelectorAll('.storyboard-grid img');
-
-        // Open modal on image click
-        storyboardImages.forEach(img => {
-            img.addEventListener('click', function() {
-                modal.classList.add('active');
-                modalImage.src = this.src;
-            });
-        });
-
-        // Close modal on close button click
-        modalClose.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-
-        // Close modal on background click
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                modal.classList.remove('active');
-            }
-        });
-    </script>
 </body>
 
 </html>
