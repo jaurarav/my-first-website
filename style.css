@@ -9,7 +9,7 @@ h1 {
 }
 
 img {
-  border: 1px solid #ddd;
+  border: none;
   padding: 5px;
   width: 600px;
 }
@@ -19,7 +19,7 @@ img {
 
 /* Global image defaults: responsive by default */
 img {
-  border: 1px solid #ddd;
+  border: none;
   padding: 5px;
   max-width: 200%;
   /* scale down to container width */
@@ -722,7 +722,11 @@ body {
   margin-left: 50%;
   width: 50%;
   padding: 24px;
-  background: #f3f3f3;
+  background: #c2f4ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .visual-stack {
@@ -800,10 +804,8 @@ body {
 
 
   /* MOVE THESE VALUES TO POSITION HOTSPOT */
-  left: 60%;
+  left: 52%;
   top: 40%;
-
-
   transform: translate(-50%, -50%);
   cursor: pointer;
   z-index: 5;
@@ -812,7 +814,41 @@ body {
 
 /* Size of hotspot icon */
 .hotspot-icon {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   display: block;
+}
+
+/* Label styling */
+.hotspot-label {
+  position: absolute;
+  left: 120%;
+  /* places it to the right of icon */
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  width: 220px;
+  padding: 10px 12px;
+
+
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+
+  font-size: 14px;
+  line-height: 1.4;
+
+
+  opacity: 0;
+  pointer-events: none;
+  /* prevents flicker */
+  transition: opacity 0.25s ease;
+}
+
+
+/* THE MAGIC: reveal on hover */
+.hotspot:hover .hotspot-label {
+  opacity: 1;
 }
