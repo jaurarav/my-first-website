@@ -777,3 +777,42 @@ body {
 .spacer {
   height: 20vh;
 }
+
+/* Makes image container a positioning reference */
+.image-stage {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Ensure main image behaves predictably */
+.main-image {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+
+/* Hotspot container sits on top of image */
+.hotspot {
+  position: absolute;
+
+
+  /* MOVE THESE VALUES TO POSITION HOTSPOT */
+  left: 60%;
+  top: 40%;
+
+
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 5;
+}
+
+
+/* Size of hotspot icon */
+.hotspot-icon {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
