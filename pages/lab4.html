@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../Images/Logo.png" alt="My DevDiaries Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="lab4.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <span> / </span>
+            <a href="lab4.html">Lab 4</a>
+        </nav>
+        <section class="lab-header">
+            <h1>Lab 4</h1>
+            <p class="lab-date">5/February/2026</p>
+        </section>
+
+        <section class="lab-content">
+            <h2>What I Learned</h2>
+
+            <div class="learning-section">
+                <p>In this technology experiment, I took a dive into Procreate Dreams! I will be doing 2D frame by frame animation for part of my MRP and I was testing out different softwares to accomplish this! </p>
+            </div>
+
+
+        </section>
+
+        <section class="animation-2D">
+            <h2>2D Animation</h2>
+            <p class="storyboard-instruction">Watch the short animation below!</p>
+
+            <div class="animation-video">
+                <video width="100%" controls>
+                    <source src="../videos/Jaura_R_Garden Animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="lab-reflection">
+            <h2>Reflection</h2>
+            <p><strong>Procreate dreams seems like a dreamy animation tool that I hope to get better at!</strong></p>
+            <p>I wanted to try a garden scene that could be used in my group project's final storytelling. I tried to animate different types of animals at first, such as a cat walking and bunny hopping, however that was difficult at first because I was still watching a lot of tutorials and getting used to the user interface of procreate dreams. I am excited to continue to explore this software for more of my MRP!</p>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged image">
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.querySelector('.modal-close');
+        const storyboardImages = document.querySelectorAll('.storyboard-grid img');
+
+        // Open modal on image click
+        storyboardImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.classList.add('active');
+                modalImage.src = this.src;
+            });
+        });
+
+        // Close modal on close button click
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+
+        // Close modal on background click
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
