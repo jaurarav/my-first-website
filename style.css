@@ -559,6 +559,20 @@ main {
 }
 
 /* Reflection Section */
+
+/* Ensure there's space between the animation video and the
+   "Animation Screenshots" header */
+.animation-video {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem; /* center and add bottom spacing */
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .animation-video {
+    margin-bottom: 1.5rem;
+  }
+}
 .lab-reflection {
   max-width: 800px;
   margin: 0 auto;
