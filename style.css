@@ -523,6 +523,41 @@ main {
   background-color: #f8f9fa;
 }
 
+/* Animation Images Grid: side-by-side layout */
+.animation-grid {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.animation-grid figure {
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.animation-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .animation-grid figure {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 /* Reflection Section */
 .lab-reflection {
   max-width: 800px;
