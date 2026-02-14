@@ -565,7 +565,7 @@ main {
 .animation-video {
   max-width: 1200px;
   margin: 0 auto 2.5rem; /* center and add bottom spacing */
-  padding-bottom: 0.5rem;
+  padding-bottom: 1 rem;
 }
 
 @media (max-width: 768px) {
