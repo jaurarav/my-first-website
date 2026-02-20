@@ -46,7 +46,7 @@
             <h2>Project Research</h2>
             <p class="storyboard-instruction">Click on each to see the full details!</p>
 
-            <div class="storyboard-grid">
+            <div class="screenshot-grid">
                 <figure>
                     <img src="../images/Diary-1.1.png" alt="This is screenshot 1">
                     <figcaption>Research Notes</figcaption>
@@ -72,9 +72,9 @@
 
             <div class="learning-section">
                 <h3>2D Animation, Prototyping, Background Development</h3>
-                <p>I explored frame by frame 2D animation, using Procreate Dreams. More details on this can be explored <a href="technologyexperiment.html">here</a>.</p>
-                <p>I tried creating prototypes using Figma to get a feel of the scrollytelling interface.</p>
-                <p>I took lots of inspiration from animators and pinterest for the background design.</p>
+                <p>• I explored frame by frame 2D animation, using Procreate Dreams. More details on this can be explored <a href="technologyexperiment.html">here</a>.</p>
+                <p>• I tried creating prototypes using Figma to get a feel of the scrollytelling interface.</p>
+                <p>• I took lots of inspiration from animators and pinterest for the background design.</p>
             </div>
 
 
@@ -84,7 +84,7 @@
             <h2>Project Research</h2>
             <p class="storyboard-instruction">Click on each to see the full details!</p>
 
-            <div class="storyboard-grid">
+            <div class="screenshot-grid">
                 <figure>
                     <img src="../images/animation-2.PNG" alt="This is screenshot 1">
                     <figcaption>Animation Workbook</figcaption>
@@ -104,8 +104,52 @@
 
         <section class="lab-reflection">
             <h2>Reflection</h2>
-            <p>This lab was very interesting in terms of understanding the different languages. As I went through the lab, I eventually realized how the small extra edits in code can cause errors and not show anything. I had a lot of fun changing colours for each page. Understanding the column layouts in the footer was so interesting! Eventually, as I started to learn the codes better, I became open to experimenting a bit more and utilize CoPilot for any help or quick error fixes. It's also hard to visualize the placement of the images at first but eventually I realized how the spacing works based on screen size. Overall, it's been interesting and fun to learn the relationship between codes and how it comes to fruitation in the website!</p>
+            <p><strong>2D Animation</strong></p>
+            <p>I had a lot of fun learning more about 2D animation and exploring how to create frame by frame animations. I think as I continue to work on it more, I will get better and better at it.</p>
+            <p><strong>Prototyping</strong></p> 
+            <p>I initially thought Figma had a feature for scrollytelling however it doesnt. I even watched a few tutorials on Youtube trying to stimulate a scroll approach, where items could pop up when you hover on the screen however this is hard to perfect with the layout. In the end, I just decided to have placeholder images to show where they would be placed once a user scrolls to that place. I also created a prototype of the garden flow and how the user would be able to click on a plant and how the overlay information would appear. This part was easy to communicate. After communicating with Shay, I will try to simulate the scrollytelling through Adobe After Effects.</p>
+            <p><strong>Background Development</strong></p>
+            <p>For the background development, I took a lot of inspiration from different artists on pinterest and instagram. I really wanted to create a background that has a lot of soft greenery and warmth to it. As I was testing about Procreate Dreams, I found many artists tutorials where they work with a lot of nature landscapes. Through their work, I also gained a lot of inspiration and going forward, I will start creating a background for the website using different elements from the inspiration.</p>
         </section>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.modal-close');
+
+        // Get all images in screenshot-grid and storyboard-grid
+        const images = document.querySelectorAll('.screenshot-grid img, .storyboard-grid img');
+
+        // Add click event to each image
+        images.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                modal.classList.add('active');
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+            });
+        });
+
+        // Close modal when X is clicked
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
