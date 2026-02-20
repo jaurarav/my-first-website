@@ -36,6 +36,14 @@ img {
   display: block;
 }
 
+/* Bold horizontal separator line */
+hr {
+  border: none;
+  height: 3px;
+  background-color: #000000;
+  margin: 3rem 0;
+}
+
 
 .container {
   position: relative;
