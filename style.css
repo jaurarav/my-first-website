@@ -337,6 +337,101 @@ main {
   margin: 0 auto;
 }
 
+/* Two-column layout for home: gallery on left, single large clickable box on right */
+.home-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch; /* allow right box to match gallery height */
+}
+
+.vertical-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+
+.vertical-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e4d2c8;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2c3e50;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Make the boxed link span the full height of the gallery column */
+.vertical-item.vertical-full {
+  height: 100%;
+  min-height: 220px;
+}
+
+/* Layout for full vertical box: image fills space, label at bottom */
+.vertical-item.vertical-full {
+  flex-direction: column;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.vertical-item.vertical-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 1;
+}
+
+.vertical-item.vertical-full .vertical-label {
+  color: #000000;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.vertical-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.vertical-label {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Responsive: stack on small screens; vertical box becomes full-width below gallery */
+@media (max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vertical-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .vertical-item.vertical-full {
+    height: auto;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Gallery Item Styling */
 .gallery-item {
   position: relative;
