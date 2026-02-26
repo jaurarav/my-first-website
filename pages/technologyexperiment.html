@@ -5,23 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <script defer src="../js/include.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../Images/Logo.png" alt="My DevDiaries Logo">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="lab4.html">About</a></li>
-                <li><a href="pages/projectentries.html">Project Entries</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header will be inserted here -->
+    <div data-include="../components/header.html"></div>
     <main>
         <nav class="breadcrumb">
             <a href="lab3.html">Lab3</a>
@@ -83,6 +72,8 @@
             <img id="modalImage" src="" alt="Enlarged image">
         </div>
     </div>
+    <!-- Footer will be inserted here -->
+    <div data-include="../components/footer.html"></div>
 </body>
 
 </html>
