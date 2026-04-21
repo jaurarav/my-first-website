@@ -598,6 +598,20 @@ main {
   margin: 0 auto;
 }
 
+.screenshot-grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .screenshot-grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .screenshot-grid figure {
   margin: 0;
   background: white;
