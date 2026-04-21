@@ -228,46 +228,6 @@
         </section>
     </main>
 
-    <!-- Lightbox Modal -->
-    <div id="imageModal" class="modal">
-        <span class="modal-close">&times;</span>
-        <div class="modal-content">
-            <img id="modalImage" src="" alt="">
-        </div>
-    </div>
-
-    <script>
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.modal-close');
-
-        // Get all images in screenshot-grid, screenshot-grid2 and storyboard-grid
-        const images = document.querySelectorAll('.screenshot-grid img, .screenshot-grid2 img, .storyboard-grid img');
-
-        // Add click event to each image
-        images.forEach(img => {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', () => {
-                modal.classList.add('active');
-                modalImage.src = img.src;
-                modalImage.alt = img.alt;
-            });
-        });
-
-        // Close modal when X is clicked
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        // Close modal when clicking outside the image
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-    </script>
-
-
     <hr>
 
         <section class="lab-header">
