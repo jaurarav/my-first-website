@@ -679,6 +679,18 @@ main {
   }
 }
 
+/* Prototype Video Styling */
+.prototype-video {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.prototype-video video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .lab-reflection {
   max-width: 1200px;
   margin: 0 auto;
